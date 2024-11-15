@@ -19,7 +19,7 @@ class UserScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    debugPrint('-----REBUILD BuyerScreen');
+    debugPrint('-----REBUILD $userRole Screen');
     return ProviderView<UserProvider>(
       isAutoDispose: false,
       tag: tag,
@@ -70,7 +70,7 @@ class UserScreen extends StatelessWidget {
                                     value: (provider) => provider.name,
                                     builder: (context, provider) {
                                       debugPrint(
-                                          '-----REBUILD BuyerScreen: Age Text');
+                                          '-----REBUILD $userRole Screen: Age Text');
                                       return Text(
                                         ' Name: ${provider.name ?? ''}',
                                       );
@@ -92,7 +92,7 @@ class UserScreen extends StatelessWidget {
                                         (provider.address, provider.age),
                                     builder: (context, provider) {
                                       debugPrint(
-                                          '-----REBUILD BuyerScreen: Address, Name Texts');
+                                          '-----REBUILD $userRole Screen: Address, Name Texts');
                                       return Text(
                                         ' Address: ${provider.address ?? ''}, Age: ${provider.age ?? ''}',
                                       );
@@ -105,7 +105,7 @@ class UserScreen extends StatelessWidget {
                                 value: (provider) => provider.orders,
                                 builder: (context, provider) {
                                   debugPrint(
-                                      '-----REBUILD SellerScreen: Orders Text');
+                                      '-----REBUILD $userRole Screen: Orders Text');
                                   return provider.orders.isNotEmpty
                                       ? Column(
                                           children: [

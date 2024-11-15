@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_state_management/screens/user/presentation/widgets/user_screen.dart';
+import 'package:my_state_management/screens/user/presentation/user_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
