@@ -70,7 +70,7 @@ class UserScreen extends StatelessWidget {
                                     value: (provider) => provider.name,
                                     builder: (context, provider) {
                                       debugPrint(
-                                          '-----REBUILD $userRole Screen: Age Text');
+                                          '-----REBUILD $userRole Screen: Name Text');
                                       return Text(
                                         ' Name: ${provider.name ?? ''}',
                                       );
@@ -92,7 +92,7 @@ class UserScreen extends StatelessWidget {
                                         (provider.address, provider.age),
                                     builder: (context, provider) {
                                       debugPrint(
-                                          '-----REBUILD $userRole Screen: Address, Name Texts');
+                                          '-----REBUILD $userRole Screen: Address, Age Texts');
                                       return Text(
                                         ' Address: ${provider.address ?? ''}, Age: ${provider.age ?? ''}',
                                       );
