@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -26,6 +28,8 @@ class _ProviderViewState<P extends Provider> extends State<ProviderView<P>> {
       widget.initializeProvider,
       tag: widget.tag,
     );
+
+    min(1, 2);
     super.initState();
   }
 
@@ -34,6 +38,14 @@ class _ProviderViewState<P extends Provider> extends State<ProviderView<P>> {
 
   @override
   void dispose() {
+
+    Map map = {3: 'three', 1: 'one', 4: 'four', 5: 'five', 2: 'two'};
+
+    var sortedByValueMap = Map.fromEntries(
+        map.entries.toList()..sort((e1, e2) => e1.value.compareTo(e2.value)));
+
+    print(sortedByValueMap);
+    
     if (widget.isAutoDispose) {
       CustomProviderManager.removeProvider<P>(tag: widget.tag);
     }
@@ -41,3 +53,5 @@ class _ProviderViewState<P extends Provider> extends State<ProviderView<P>> {
     super.dispose();
   }
 }
+
+
