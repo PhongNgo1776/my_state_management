@@ -35,6 +35,8 @@ class _ProviderViewState<P extends Provider> extends State<ProviderView<P>> {
 
   @override
   void dispose() {
+    print('Sort map:' + sortedByValueMap.toString());
+
     if (widget.isAutoDispose) {
       CustomProviderManager.removeProvider<P>(tag: widget.tag);
     }
