@@ -39,7 +39,7 @@ class _ProviderViewState<P extends Provider> extends State<ProviderView<P>> {
       CustomProviderManager.removeProvider<P>(tag: widget.tag);
     }
 
-    print('12');
+    print('122');
     super.dispose();
   }
 }
