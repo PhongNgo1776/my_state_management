@@ -37,6 +37,7 @@ class _ProviderViewState<P extends Provider> extends State<ProviderView<P>> {
     if (widget.isAutoDispose) {
       CustomProviderManager.removeProvider<P>(tag: widget.tag);
     }
+    // Test
     super.dispose();
   }
 }
